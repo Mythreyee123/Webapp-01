@@ -18,7 +18,7 @@ public class Main {
 
 	@RequestMapping("/")
 	public String home() {
-			return "WebApp1";
+			return "First webapp";
 	}
 	
 	@RequestMapping(value = "/{bucket}", method = RequestMethod.GET)
