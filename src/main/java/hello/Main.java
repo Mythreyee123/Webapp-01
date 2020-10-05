@@ -21,14 +21,14 @@ public class Main {
 			return "Webapplication1 started";
 	}
 	
-	@RequestMapping(value = "/{bucket}", method = RequestMethod.GET)
+	@RequestMapping(value = "/H1", method = RequestMethod.GET)
 	public ResponseEntity<?> listObjects(@PathVariable("bucket") String bucket,
 		  HttpServletRequest req, HttpServletResponse response) {
 			  StringBuilder objectList = new StringBuilder();
 			  System.out.println("In first project get method");
 			  objectList.append("<?xml version=\"1.0\"?><catalog><book id=\"001\"><title>This is from webapp</title></book></catalog>");
 
-			  return new ResponseEntity<StringBuilder>(objectList, HttpStatus.OK);
+			  return new ResponseEntity<StringBuilder>(objectList, HttpStatus.FORBIDDEN);
 		  }
 		  
 	@RequestMapping(value = "/{bucket}", method = RequestMethod.PUT)
