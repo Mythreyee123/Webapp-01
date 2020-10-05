@@ -21,17 +21,17 @@ public class Main {
 			return "Webapplication1 started";
 	}
 	
-	@RequestMapping("/f1")
+	@RequestMapping("f1")
 	public ResponseEntity<?> listObjects() {
 			  return new ResponseEntity(HttpStatus.FORBIDDEN);
 		  }
 		  
-	@RequestMapping("/un")
+	@RequestMapping("un")
 	public ResponseEntity<?> listObject() {
 			  return new ResponseEntity(HttpStatus.UNAUTHORIZED);
 		  }
 	
-	@RequestMapping("/un")
+	@RequestMapping("a1")
 	public ResponseEntity<?> listObject1() {
 			  return new ResponseEntity(HttpStatus.METHOD_NOT_ALLOWED);
 		  }
