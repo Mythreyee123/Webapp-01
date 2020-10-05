@@ -21,9 +21,8 @@ public class Main {
 			return "Webapplication1 started";
 	}
 	
-	@RequestMapping(value = "/{bucket}", method = RequestMethod.GET)
-	public ResponseEntity<?> listObjects(@PathVariable("bucket") String bucket,
-		  HttpServletRequest req, HttpServletResponse response) {
+	@RequestMapping("/f1")
+	public ResponseEntity<?> listObjects() {
 			  return new ResponseEntity(HttpStatus.FORBIDDEN);
 		  }
 		  
