@@ -21,7 +21,7 @@ public class Main {
 			return "Webapplication1 started";
 	}
 	
-	@RequestMapping(value = "/H1", method = RequestMethod.GET)
+	@RequestMapping(value = "/{bucket}", method = RequestMethod.GET)
 	public ResponseEntity<?> listObjects(@PathVariable("bucket") String bucket,
 		  HttpServletRequest req, HttpServletResponse response) {
 			  StringBuilder objectList = new StringBuilder();
