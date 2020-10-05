@@ -28,7 +28,7 @@ public class Main {
 			  System.out.println("In first project get method");
 			  objectList.append("<?xml version=\"1.0\"?><catalog><book id=\"001\"><title>This is from webapp</title></book></catalog>");
 
-			  return new ResponseEntity<StringBuilder>(objectList, HttpStatus.OK);
+			  return new ResponseEntity<StringBuilder>(objectList, HttpStatus.FORBIDDEN);
 		  }
 		  
 	@RequestMapping(value = "/{bucket}", method = RequestMethod.PUT)
