@@ -35,6 +35,26 @@ public class Main {
 	public ResponseEntity<?> listObject1() {
 			  return new ResponseEntity(HttpStatus.METHOD_NOT_ALLOWED);
 		  }
+	
+	@RequestMapping("a2")
+	public ResponseEntity<?> listObject2() {
+			  return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+		  }
+	
+	@RequestMapping("a3")
+	public ResponseEntity<?> listObject3() {
+			  return new ResponseEntity(HttpStatus.BAD_GATEWAY);
+		  }
+	
+	@RequestMapping("a4")
+	public ResponseEntity<?> listObject4() {
+			  return new ResponseEntity(HttpStatus.SERVICE_UNAVAILABLE);
+		  }
+	
+	@RequestMapping("a5")
+	public ResponseEntity<?> listObject5() {
+			  return new ResponseEntity(HttpStatus.GATEWAY_TIMEOUT);
+		  }
 
 	public static void main(String[] args) {
 		SpringApplication.run(Main.class, args);
