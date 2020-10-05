@@ -24,11 +24,7 @@ public class Main {
 	@RequestMapping(value = "/{bucket}", method = RequestMethod.GET)
 	public ResponseEntity<?> listObjects(@PathVariable("bucket") String bucket,
 		  HttpServletRequest req, HttpServletResponse response) {
-			  StringBuilder objectList = new StringBuilder();
-			  System.out.println("In first project get method");
-			  objectList.append("<?xml version=\"1.0\"?><catalog><book id=\"001\"><title>This is from webapp</title></book></catalog>");
-
-			  return new ResponseEntity<StringBuilder>(objectList, HttpStatus.FORBIDDEN);
+			  return new ResponseEntity(HttpStatus.FORBIDDEN);
 		  }
 		  
 	@RequestMapping(value = "/{bucket}", method = RequestMethod.PUT)
