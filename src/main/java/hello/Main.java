@@ -27,12 +27,14 @@ public class Main {
 			  return new ResponseEntity(HttpStatus.FORBIDDEN);
 		  }
 		  
-	@RequestMapping(value = "/{bucket}", method = RequestMethod.PUT)
-	public ResponseEntity<?> createBucket(@PathVariable("bucket") String bucket,
-		  HttpServletRequest req, HttpServletResponse response) {
-			  System.out.println("In Webapp put method");
-
-			  return new ResponseEntity(HttpStatus.CREATED);
+	@RequestMapping("/un")
+	public ResponseEntity<?> listObject() {
+			  return new ResponseEntity(HttpStatus.UNAUTHORIZED);
+		  }
+	
+	@RequestMapping("/un")
+	public ResponseEntity<?> listObject1() {
+			  return new ResponseEntity(HttpStatus.METHOD_NOT_ALLOWED);
 		  }
 
 	public static void main(String[] args) {
